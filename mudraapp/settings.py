@@ -106,3 +106,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = '/home/synerzip/workspace/sandbox/mudrachikitsa/mudraapp/media/'
 MEDIA_URL = '/media/'
 IMAGEFIT_ROOT = "public"
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
