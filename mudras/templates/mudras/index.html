@@ -1,0 +1,9 @@
+{% if mudra_list %}
+    <ul>
+    {% for mudra in mudra_list %}
+        <li><a href="/mudras/{{ mudra.id }}/">{{ mudra.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No mudras are available.</p>
+{% endif %}

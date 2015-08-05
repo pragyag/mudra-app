@@ -1,0 +1,20 @@
+{% load imagefit %}
+{% if mudra_details %}
+    <ul>
+    <h2> {{mudra_details.name}} </h2>
+    {% block content %}
+    <img src="{{MEDIA_ROOT}}{{ mudra_details.image.url }}">
+    {% endblock %} 
+    <p> {{mudra_details.method | linebreaks}}</p>
+    <h3> Time and Precautions </h3>
+    <p> {{mudra_details.pointers | linebreaks}}</p>
+    <h3> Benefits </h3>
+    <p> {{mudra_details.benefits | linebreaks}}</p>
+    <h3> Curable diseases </h3>
+    <p> {{mudra_details.diseases | linebreaks}}</p>
+    <h3> User Experiences </h3>
+    <p> {{mudra_details.experiences | linebreaks}}</p>
+    </ul>
+{% else %}
+    <p>No mudras are available.</p>
+{% endif %}
